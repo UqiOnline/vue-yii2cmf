@@ -1,6 +1,6 @@
 # vue-yii2cmf
 
-> yii2cmf的前台vue版本
+> yii2cmf的前台vue版本,演示地址:(http://vue.51siyuan.cn)[http://vue.51siyuan.cn]
 
 ## Build Setup
 

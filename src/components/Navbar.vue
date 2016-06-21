@@ -1,19 +1,13 @@
 <template>
-    <nav class="navbar navbar-default navbar-static-top">
+    <nav class="navbar navbar-default navbar-fixed-top">
         <div class="container">
             <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-7" aria-expanded="false">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
                 <a class="navbar-brand" v-link="'/home'">Yii2CMF</a>
             </div>
 
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-7">
-                <ul class="nav navbar-nav" v-for="nav in navs">
-                    <li><a v-link="{ name: 'list', params: { cid: nav.id } }">{{ nav.title }}</a></li>
+            <div class="pull-right">
+                <ul class="nav navbar-nav">
+                    <li v-for="nav in navs"><a v-link="{ name: 'list', params: { cid: nav.id } }">{{ nav.title }}</a></li>
                 </ul>
             </div><!-- /.navbar-collapse -->
         </div>
@@ -45,5 +39,19 @@ export default{
     .v-link-active,.v-link-active:hover{
         color: #555!important;
         background-color: #e7e7e7!important;
+    }
+    .navbar-header {
+        float: left;
+    }
+    .navbar-nav {
+        float: left;
+        margin: 0;
+    }
+    .navbar-nav>li {
+        float: left!important;
+    }
+    .navbar-nav>li>a {
+        padding-top: 15px;
+        padding-bottom: 15px;
     }
 </style>
